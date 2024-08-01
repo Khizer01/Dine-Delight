@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { removeItemFromCart, clearCart, addItemToCart } from '../cartSlice';
 
@@ -74,6 +74,7 @@ function Cart() {
           <span>${grandTotal.toFixed(2)}</span>
         </div>
       </div>
+      <p className='ClearCart' onClick={handleClearCart}>Clear Cart</p>
       <button className="checkout-button" onClick={()=> navigate('/checkout')}>Checkout <i className="fa-regular fa-circle-check"></i></button>
       </div>
       }

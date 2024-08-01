@@ -531,6 +531,17 @@ nav{
     display: flex;
     gap: 12px;
   }
+  .ClearCart{
+    color: #cf8b0e;
+    text-decoration: underline;
+    display: flex;
+    margin: 40px 0 10px;
+    justify-content: flex-end;
+    cursor: pointer;
+  }
+  .ClearCart:hover{
+    color: #a8710c;
+  }
 
   /*   Confirmation Screen     */     
 

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { addItemToCart } from '../cartSlice';
@@ -20,13 +20,13 @@ function Menu() {
 
   const [showScroll, setScroll] = useState(false);
 
-  const checkScroll = () => {
+  const checkScroll = useCallback(() => {
     if (!showScroll && window.pageYOffset > 300) {
       setScroll(true);
     } else {
       setScroll(false);
     }
-  };
+  },[showScroll]);
 
   const scrollTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -37,7 +37,7 @@ function Menu() {
     return () => {
       window.removeEventListener('scroll', checkScroll);
     };
-  }, []);
+  }, [checkScroll]);
 
 
   return (
