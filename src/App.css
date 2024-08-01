@@ -746,7 +746,7 @@ nav{
 .custom-alert {
   position: fixed;
   top: 5.5rem;
-  left: 10.5%;
+  left: 9.2rem;
   transform: translateX(-45%);
   background-color: #28a745;
   color: white;
@@ -945,4 +945,10 @@ select{
     .view-cart{
       max-width: 80%;
     } 
+    .custom-alert{
+      font-size: small;
+      padding: 10px 12px;
+      top: 4.5rem;
+      left: 8rem;
+    }
 }

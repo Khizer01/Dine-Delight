@@ -37,7 +37,7 @@ const Checkout = () => {
         </div>
         <div className='checkout-Con-detail '>
           <label>Phone Number</label>
-          <input type="text" name="phoneNumber" value={user.phoneNumber} onChange={handleChange} required/>
+          <input type="number" name="phoneNumber" value={user.phoneNumber} onChange={handleChange} required/>
         
           <label>Email</label>
           <input type="email" name="email" value={user.email} onChange={handleChange} />
