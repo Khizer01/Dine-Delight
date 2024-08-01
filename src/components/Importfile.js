@@ -1,0 +1,10 @@
+export {default as NavBar} from './NavBar.jsx';
+export {default as Home} from './Home.jsx';
+export {default as Menu} from './Menu.jsx';
+export {default as Footer} from './Footer.jsx';
+export {default as NotFound} from './NotFound.jsx';
+export {default as Contact} from './Contact.jsx';
+export {default as About} from './About.jsx';
+export {default as Cart} from './Cart.jsx';
+export {default as Confirmation} from './Confirmation.jsx';
+export {default as Checkout} from './Checkout.jsx';
