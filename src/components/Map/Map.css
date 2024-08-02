@@ -1,0 +1,55 @@
+.location {
+  display: flex;
+  padding: 40px 35px;
+  background-color: #e1e1e12b;
+  gap: 2.5em;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.map {
+  width: 50%;
+}
+
+.location .map iframe {
+  border: none;
+  width: 100%;
+  height: 25em;
+}
+
+.address {
+  width: 50%;
+  text-align: left;
+}
+
+.address h2 {
+  font-weight: bold;
+  border-bottom: 2px solid #000;
+  padding-bottom: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.address p {
+  margin: 2em 0 3.5em 0;
+  font-size: large;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 768px) {
+  .location {
+    flex-direction: column;
+    width: 80%;
+  }
+
+  .location .map iframe {
+    width: 100%;
+  }
+
+  .map {
+    width: 100%;
+  }
+
+  .address {
+    width: 100%;
+  }
+}

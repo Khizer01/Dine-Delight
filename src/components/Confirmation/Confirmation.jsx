@@ -1,14 +1,14 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { clearCart } from '../cartSlice';
-import CustomAlert from './CustomAlert';
+import { clearCart } from '../../cartSlice';
+import CustomAlert from '../CustomAlert/CustomAlert';
 import { useState } from 'react';
-
+import './Confirmation.css';
 const Confirmation = () => {
   const cartItems = useSelector((state) => state.cart.items);
   const user = useSelector((state) => state.user);
   const dispatch = useDispatch();
- const [show, setShow] = useState(false);
+ const [alert, setAlert] = useState({show: false, message: '', color: '', icon: false});
 
 
   const totalAmount = cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
@@ -17,13 +17,23 @@ const Confirmation = () => {
   const grandTotal = totalAmount + tax + deliveryFee;
 
   const handlePlaceOrder = () => {
-    dispatch(clearCart());
-    setShow(true);
+    if (cartItems.length > 0) {
+      dispatch(clearCart());
+      setAlert({show: true, message: 'Order placed successfully!', color: 'success', icon: true});
+    }else{
+    setAlert({show: true, message: 'Please add items to cart!', color: 'red', icon: false});
+    }
   };
   const isDisabled = cartItems.length === 0 ? 'disabled' : "place-order-button";
   return (
     <>  
-    {show && <CustomAlert message="Order placed successfully!" show={show} />}
+       {alert.show && cartItems.length > 0 && (
+        <CustomAlert message={alert.message} show={alert.show} color={alert.color}  icon = {alert.icon} />
+      )}
+
+      {alert.show && cartItems.length === 0 && (
+        <CustomAlert message={alert.message} show={alert.show} color={alert.color}  icon = {alert.icon} />
+      )}
      <div className="confirmation-screen">
       <div className="left-container">
         <h3>Delivery Details</h3>

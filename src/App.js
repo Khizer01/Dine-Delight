@@ -1,10 +1,8 @@
 import { Routes, Route } from 'react-router-dom';
-// import { useState } from 'react';
 import './App.css';
 import {NavBar, Home, Menu, Footer, NotFound, Contact, About, Cart, Confirmation, Checkout} from './components/Importfile';
 
 function App() {
-  // const [cart, setCart] = useState([]);
   return (
     <div>
    <NavBar />
@@ -19,6 +17,7 @@ function App() {
     <Route path='confirmation' element={<Confirmation />} />
     <Route path='*' element={<NotFound />} />
    </Routes>
+   
    <Footer/>
     </div>
   );

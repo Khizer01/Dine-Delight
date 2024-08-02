@@ -1,5 +1,6 @@
 import React from 'react'
-import error from '../assets/error.jpg';
+import error from '../../assets/error.jpg';
+import './NotFound.css';
 function NotFound() {
   return (
     <div className='container'>

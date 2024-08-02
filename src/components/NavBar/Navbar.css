@@ -1,0 +1,129 @@
+
+nav ul {
+    display: flex;
+    gap: 1.5em;
+    list-style: none;
+    margin-right: 2em;
+    align-items: center;
+}
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-size: 1.2em;
+}
+nav ul li a:hover{
+    color: #db8f04;
+    transition: 0.3s;
+}
+.head{
+    display: flex;
+    align-items: center;
+    font-size: large;
+    gap: 8px;
+    text-decoration: none;
+    color: #db8f04;
+    justify-content: space-between;
+    margin: 0 1em;
+}
+.logo-text{
+    display: flex;
+    align-items: center;
+    font-size: large;
+    gap: 8px;
+    text-decoration: none;
+    color: #db8f04;
+}
+.logo{
+    width: 2em;
+    height: 1.5em;
+    margin-right: 0.1em;
+    color: #d98e05;
+}
+.logo-text p{
+    font-weight: 600;
+    font-size: larger;
+}
+.logo-text span{
+    color: white;
+    margin-left: 0.2em;
+}
+.logo-text span:hover{
+    color: #db8f04;
+    transition: 0.3s;
+}
+.logo-text:hover{
+    color: #fff;
+    transition: 0.3s;
+}
+.link-active{
+    color: #db8f04;
+    text-decoration: underline;
+}
+.cart{
+    width: 1.3em;
+    height: 1.8em;
+    border-radius: 50%;
+    padding: 0px 10px;
+    margin-top: 3px;
+}
+.cart:hover{
+    background-color: #db8f04;
+    transition: 0.4s;
+}
+.menuBar{
+    display: none;
+    width: 1.5em;
+    height: 1.5em;
+    cursor: pointer;
+}
+.cross{
+    display: none;
+    width: 1.6em;
+    height: 1.6em;
+    cursor: pointer;
+}
+.active{
+    display: block;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000000db;
+    position: absolute;
+    min-width: 100%;
+    z-index: 1000;
+}
+
+@media screen and (max-width: 768px){
+    .menuBar{
+        display: block;
+    }
+    nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: normal;
+        background-color: #000000db;
+        flex-direction: column;
+    }
+    nav ul{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    nav ul li{
+        margin: 5px 0;
+    }
+
+    .hide{
+        display: none;
+    }
+    .cart {
+        width: 1.3em;
+        height: 1.6em;
+        padding: 0px 5px;
+        margin-top: 0px;
+        border-radius: 0;
+    }
+}

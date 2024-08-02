@@ -1,7 +1,7 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
-import Map from './Map';
-
+import Map from '../Map/Map';
+import './Home.css';
 function Home() {
   const navigate = useNavigate();
   const handleClick = () => {

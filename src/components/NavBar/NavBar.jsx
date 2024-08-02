@@ -1,10 +1,11 @@
 import { NavLink, Link } from 'react-router-dom';
 import React from 'react'
 import { useSelector } from 'react-redux';
-import  logo  from '../assets/logo.svg';
-import cart from '../assets/cart.svg';
-import menuBar from '../assets/menuBar.svg';
-import cross from '../assets/cross.svg';
+import  logo  from '../../assets/logo.svg';
+import cart from '../../assets/cart.svg';
+import menuBar from '../../assets/menuBar.svg';
+import cross from '../../assets/cross.svg';
+import './Navbar.css';
 function NavBar() {
   const cartItems = useSelector((state) => state.cart.items);
     const getClass = ({isActive}) => isActive ? 'link-active' : null;

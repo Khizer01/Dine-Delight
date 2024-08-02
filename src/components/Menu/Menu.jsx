@@ -1,8 +1,9 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { addItemToCart } from '../cartSlice';
-import data from '../data';
+import { addItemToCart } from '../../cartSlice';
+import data from '../../data';
+import './Menu.css';
 
 function Menu() {
   const menu = data;

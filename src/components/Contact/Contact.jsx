@@ -1,5 +1,6 @@
 import React from 'react'
-import Map from './Map';
+import Map from '../Map/Map';
+import './contact.css';
 function Contact() {
   return (
     <div className='contact' >
