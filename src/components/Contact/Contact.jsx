@@ -4,9 +4,9 @@ import './contact.css';
 function Contact() {
   return (
     <div className='contact' >
-        <h1 className='contact-heading'>Contact</h1>
-        <div className='c-container'>
-      <Map />
+      <h1 className='contact-heading'>Contact</h1>
+      <div className='c-container'>
+        <Map />
       </div>
     </div>
   )

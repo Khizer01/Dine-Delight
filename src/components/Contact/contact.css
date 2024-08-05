@@ -1,3 +1,5 @@
+@import '../../AppColors.css';
+
 .contact {
   width: 100%;
   min-height: 100vh;
@@ -13,8 +15,8 @@
 }
 
 .contact-heading {
-  color: white;
-  background: #232323;
+  color: var(--white-color);
+  background: var(--primary-color);
   padding: 10px 20px;
   border-radius: 8px;
   width: fit-content;

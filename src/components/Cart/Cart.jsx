@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { removeItemFromCart, clearCart, addItemToCart } from '../../cartSlice';
+import { removeItemFromCart, clearCart, addItemToCart } from '../../store/cart/cartSlice';
 import './Cart.css';
 
 function Cart() {
@@ -37,46 +37,46 @@ function Cart() {
   return (
     <div className='cart-sec'>
       <h2>Your Cart</h2>
-      {cartItems && cartItems.length > 0 ? 
-       cartItems.map((item) => (
-        <div key={item.id} className="cart-item">
-          <img src={item.image} alt={item.name} />
-          <div className="item-details">
-            <h3>{item.name}</h3>
-            <p>${item.price.toFixed(2)}</p>
+      {cartItems && cartItems.length > 0 ?
+        cartItems.map((item) => (
+          <div key={item.id} className="cart-item">
+            <img src={item.image} alt={item.name} />
+            <div className="item-details">
+              <h3>{item.name}</h3>
+              <p>${item.price.toFixed(2)}</p>
+            </div>
+            <div className="item-quantity">
+              <button onClick={() => handleRemoveItem(item.id)}>-</button>
+              <span>{item.quantity}</span>
+              <button onClick={() => handleAddItem(item)}>+</button>
+            </div>
           </div>
-          <div className="item-quantity">
-            <button onClick={() => handleRemoveItem(item.id)}>-</button>
-            <span>{item.quantity}</span>
-            <button onClick={() =>handleAddItem(item)}>+</button>
-          </div>
-        </div>
-      )) : 
+        )) :
         <div className='no-item'>
-          <h3>No items in cart<i className="fa-solid fa-cart-shopping" style={{color: "#d98f04", marginTop: '3px'}}></i></h3>
+          <h3>No items in cart<i className="fa-solid fa-cart-shopping" style={{ color: "#d98f04", marginTop: '3px' }}></i></h3>
         </div>
       }
-      { cartItems.length > 0 && <div>
+      {cartItems.length > 0 && <div>
         <div className="cart-totals">
-        <div className="totals-row">
-          <span>Total Amount</span>
-          <span>${totalPrice.toFixed(2)}</span>
+          <div className="totals-row">
+            <span>Total Amount</span>
+            <span>${totalPrice.toFixed(2)}</span>
+          </div>
+          <div className="totals-row">
+            <span>Tax 15%</span>
+            <span>${tax.toFixed(2)}</span>
+          </div>
+          <div className="totals-row">
+            <span>Delivery Fee</span>
+            <span>${deliveryFee.toFixed(2)}</span>
+          </div>
+          <div className="totals-row">
+            <span>Grand Total</span>
+            <span>${grandTotal.toFixed(2)}</span>
+          </div>
         </div>
-        <div className="totals-row">
-          <span>Tax 15%</span>
-          <span>${tax.toFixed(2)}</span>
-        </div>
-        <div className="totals-row">
-          <span>Delivery Fee</span>
-          <span>${deliveryFee.toFixed(2)}</span>
-        </div>
-        <div className="totals-row">
-          <span>Grand Total</span>
-          <span>${grandTotal.toFixed(2)}</span>
-        </div>
-      </div>
-      <p className='ClearCart' onClick={handleClearCart}>Clear Cart</p>
-      <button className="checkout-button" onClick={()=> navigate('/checkout')}>Checkout <i className="fa-regular fa-circle-check"></i></button>
+        <p className='ClearCart' onClick={handleClearCart}>Clear Cart</p>
+        <button className="checkout-button" onClick={() => navigate('/checkout')}>Checkout <i className="fa-regular fa-circle-check"></i></button>
       </div>
       }
     </div>

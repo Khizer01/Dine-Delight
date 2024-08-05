@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { addItemToCart } from '../../cartSlice';
-import data from '../../data';
+import { addItemToCart } from '../../store/cart/cartSlice';
+import data from '../../store/data/data';
 import './Menu.css';
 
 function Menu() {
@@ -13,7 +13,7 @@ function Menu() {
   const dispatch = useDispatch();
   const cart = useSelector((state) => state.cart.items);
   const totalPrice = useSelector((state) => state.cart.totalPrice);
-  
+
   const addToCart = (dish) => {
     dispatch(addItemToCart(dish));
   };
@@ -27,7 +27,7 @@ function Menu() {
     } else {
       setScroll(false);
     }
-  },[showScroll]);
+  }, [showScroll]);
 
   const scrollTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });

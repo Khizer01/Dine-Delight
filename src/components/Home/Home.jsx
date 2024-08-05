@@ -9,16 +9,16 @@ function Home() {
   };
 
   return (
-    <div className='main'>    
-    <div className='home'>
-      <section className='hero-sec'>
-      <div className="hero">
-      <h1>Welcome to <span className='dine'>Dine</span>Delight</h1>
-          <p>Experience the taste of joy with every bite!</p>
-      <center><button onClick={handleClick} className='order'>Order Now</button></center>
+    <div className='main'>
+      <div className='home'>
+        <section className='hero-sec'>
+          <div className="hero">
+            <h1>Welcome to <span className='dine'>Dine</span>Delight</h1>
+            <p>Experience the taste of joy with every bite!</p>
+            <center><button onClick={handleClick} className='order'>Order Now</button></center>
+          </div>
+        </section>
       </div>
-      </section>
-    </div>
 
       <section className="timings">
         <h2>Dine In Timings</h2>

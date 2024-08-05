@@ -1,25 +1,18 @@
-import { Routes, Route } from 'react-router-dom';
 import './App.css';
-import {NavBar, Home, Menu, Footer, NotFound, Contact, About, Cart, Confirmation, Checkout} from './components/Importfile';
+import { NavBar, Footer, AppRoutes } from './components/Importfile';
+import { Provider } from 'react-redux';
+import store from './store/data/dataStore';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 function App() {
   return (
-    <div>
-   <NavBar />
-
-   <Routes>
-    <Route path='/' element={<Home/>} />
-    <Route path='menu' element={<Menu />} />
-    <Route path='contact' element={<Contact/>} />
-    <Route path='about' element={<About />} />
-    <Route path='cart' element={<Cart />} />
-    <Route path='checkout' element={<Checkout />} />
-    <Route path='confirmation' element={<Confirmation />} />
-    <Route path='*' element={<NotFound />} />
-   </Routes>
-   
-   <Footer/>
-    </div>
+    <Provider store={store}>
+      <Router>
+        <NavBar />
+        <AppRoutes />
+        <Footer />
+      </Router>
+    </Provider>
   );
 }
 

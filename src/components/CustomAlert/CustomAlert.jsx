@@ -16,7 +16,7 @@ const CustomAlert = ({ message, show, duration = 4000, color = 'red', icon }) =>
 
   return (
     <div className={`custom-alert ${visible ? 'show' : ''} ${color}`}>
-     {icon && <i className="fa-solid fa-star" style={{color: "#ffffff", marginRight: "7px"}}></i>} {message}
+      {icon && <i className="fa-solid fa-star" style={{ color: "#ffffff", marginRight: "7px" }}></i>} {message}
     </div>
   );
 };

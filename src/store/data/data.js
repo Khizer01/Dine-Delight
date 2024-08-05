@@ -1,18 +1,18 @@
-import springRoll from './image/spring-roll.jpg';
-import garlicBread from './image/garlic-bread.jpg';
-import mushroom from './image/stuffed-mushroom.jpg';
-import burschetta from './image/bruschetta.jpg';
-import buffaloWings from './image/buffalo-wings.jpg';
-import beefTacos from './image/Beef Tacos.jpg';
-import chickenAlfredo from './image/chicken-alfredo.jpg';
-import steak from './image/steak.jpg';
-import veggieBurger from './image/vegge-burger.jpg';
-import applePie from './image/apple-pie.jpg';
-import Cheesecake from './image/cheese-cake.jpg';
-import grilledSalmon from './image/grilled-salmon.jpg';
-import iceCream from './image/ice-cream-sundae.jpg';
-import Brownie from './image/brownie.jpg';
-import pannaCottta from './image/Panna Cotta.jpg';
+import springRoll from '../../assets/image/spring-roll.jpg';
+import garlicBread from '../../assets/image/garlic-bread.jpg';
+import mushroom from '../../assets/image/stuffed-mushroom.jpg';
+import burschetta from '../../assets/image/bruschetta.jpg';
+import buffaloWings from '../../assets/image/buffalo-wings.jpg';
+import beefTacos from '../../assets/image/Beef Tacos.jpg';
+import chickenAlfredo from '../../assets/image/chicken-alfredo.jpg';
+import steak from '../../assets/image/steak.jpg';
+import veggieBurger from '../../assets/image/vegge-burger.jpg';
+import applePie from '../../assets/image/apple-pie.jpg';
+import Cheesecake from '../../assets/image/cheese-cake.jpg';
+import grilledSalmon from '../../assets/image/grilled-salmon.jpg';
+import iceCream from '../../assets/image/ice-cream-sundae.jpg';
+import Brownie from '../../assets/image/brownie.jpg';
+import pannaCottta from '../../assets/image/Panna Cotta.jpg';
 
 
 

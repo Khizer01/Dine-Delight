@@ -8,3 +8,4 @@ export {default as About} from './About/About.jsx';
 export {default as Cart} from './Cart/Cart.jsx';
 export {default as Confirmation} from './Confirmation/Confirmation.jsx';
 export {default as Checkout} from './Checkout/Checkout.jsx';
+export {default as AppRoutes} from './Routes/AppRoutes.jsx';
