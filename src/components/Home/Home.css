@@ -1,0 +1,88 @@
+@import '../../AppColors.css';
+
+.home {
+  background: url('../../assets/bg-desktop.jpg') no-repeat center center/cover;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero {
+  color: var(--white-color);
+  backdrop-filter: blur(6px);
+  border-radius: 12px;
+  padding: 1em 2em;
+  font-size: 1.5em;
+  text-align: center;
+  border: 1px solid var(--Lightborder-color);
+  animation: fadeInLeft 1.5s forwards;
+}
+
+.order {
+  background-color: var(--brand-color);
+  color: var(--white-color);
+  padding: 0.6em 1.8em;
+  margin-bottom: 1em;
+  margin-top: 1em;
+  border-radius: 8px;
+  border: none;
+  font-size: large;
+  cursor: pointer;
+}
+
+.order:hover {
+  color: var(--primary-color);
+}
+
+.dine {
+  color: var(--brand-color);
+}
+
+/* Timings section */
+
+.timings {
+  color: var(--white-color);
+  padding: 2em;
+  background-color: var(--primary-color);
+  text-align: center;
+}
+
+.timings h2 {
+  margin: 0px 0 30px 0;
+}
+
+.timings h2, .timings ul {
+  animation: fadeInLeft linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+.timings ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.timings li {
+  font-size: 1.1em;
+  margin: 30px 0;
+}
+
+@media screen and (max-width: 768px) {
+  .home {
+    background: url('../../assets/bg-mobile.jpg') no-repeat center center/cover;
+    bottom: 0;
+  }
+
+  .hero {
+    margin: 0 auto;
+    width: 72%;
+    padding: .5em 1.5em 1.5em;
+    z-index: 0;
+  }
+
+  .timings li {
+    font-size: 1em;
+  }
+}

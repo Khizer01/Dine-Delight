@@ -1,0 +1,16 @@
+:root {
+  --brand-color: #db8f04;
+  --white-color: #fff;
+  --primary-color: #000000db;
+  --black-color: #000;
+  --lightWhite-color: #f9f9f9;
+  --border-color: #ddd;
+  --Lightborder-color: #ffffff1c;
+  --menuBG-color: #e1e1e12b;
+  --boxShadow-color: rgba(0, 0, 0, 0.1);
+  --success-color: #28a745;
+  --danger-color: #dc3545;
+  --btnDisabled-color: #dfb66a;
+  --gray-color: #767778;
+  --NoItem-color: #7876760d;
+}

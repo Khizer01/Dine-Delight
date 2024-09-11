@@ -1,0 +1,131 @@
+@import '../../AppColors.css';
+
+.checkout {
+  display: flex;
+  justify-content: space-between;
+  padding: 100px 20px 20px 20px;
+  width: 95%;
+  min-height: 100vh;
+  margin: 0 auto;
+}
+
+.checkout .checkout-container {
+  flex: 1 1;
+  background-color: var(--lightWhite-color);
+  padding: 30px 30px 30px 45px;
+  border-radius: 8px;
+  height: max-content;
+  max-width: 50%;
+  margin: 2.5rem auto 0;
+}
+
+.checkout h3 {
+  font-size: 25px;
+  width: fit-content;
+  margin: 0px auto 25px;
+  border-bottom: 2px solid var(--brand-color);
+}
+
+.checkout form {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.checkout-place-order-button {
+  display: block;
+  min-width: 30%;
+  background-color: var(--brand-color);
+  color: var(--white-color);
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 0.7rem 1rem;
+  margin-top: 20px;
+}
+
+.checkout-userName {
+  display: flex;
+  gap: 26px;
+  margin-bottom: 1rem;
+  align-items: baseline;
+}
+
+.checkout-userName select {
+  width: 15%;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+}
+
+.checkout-userName input {
+  width: 50%;
+}
+
+.checkout input,
+.checkout textarea {
+  min-width: 31%;
+}
+
+
+.checkout-Con-detail {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 1.5rem;
+  align-items: baseline;
+}
+
+.checkout-Con-detail input {
+  width: 31.6%;
+}
+
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .Con-detail {
+    gap: 5px;
+    flex-direction: column;
+  }
+
+  .Con-detail input {
+    width: 90%;
+  }
+
+  .checkout {
+    padding: 100px 0;
+  }
+
+  .checkout .checkout-container {
+    max-width: 80%;
+    padding: 30px;
+  }
+
+  .checkout-userName,
+  .checkout-Con-detail {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .checkout-userName input,
+  .checkout-Con-detail input {
+    width: 92%;
+  }
+
+  .checkout-userName select {
+    width: 98%;
+  }
+
+  .checkout button {
+    width: 96%;
+  }
+
+  .checkout form {
+    line-height: 30px;
+    width: 100%;
+  }
+}

@@ -1,0 +1,85 @@
+@import '../../AppColors.css';
+
+.about {
+  padding: 5rem 2rem 2rem 2rem;
+  background-color: var(--lightWhite-color);
+}
+
+.about-heading {
+  color: var(--white-color);
+  background: var(--primary-color);
+  padding: 10px 20px;
+  border-radius: 8px;
+  width: fit-content;
+  margin: 15px auto;
+  animation: fadeInDown 1.5s forwards;
+}
+
+.about h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.about section {
+  margin-bottom: 2rem;
+}
+
+.about h2 {
+  animation: fadeInLeft 1.5s forwards;
+}
+
+.about p {
+  color: var(--primary-color);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 1rem 0;
+  animation: fadeInLeft 1.5s forwards;
+}
+
+.team .chefs {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+.team .chef {
+  text-align: center;
+}
+
+.team .chef img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--brand-color);
+  margin-bottom: 0.5rem;
+  transition: transform 0.2s;
+  animation: fadeInTop 1s forwards;
+}
+
+.team .chef img:hover {
+  transform: scale(1.05);
+}
+
+.team h3 {
+  color: var(--primary-color);
+  margin-top: 0.5rem;
+  animation: fadeInTop 1s forwards;
+}
+
+.para {
+  color: var(--primary-color);
+  font-weight: 500;
+  animation: fadeInTop 1s forwards;
+}
+
+.team p {
+  color: var(--primary-color);
+}
+
+@media screen and (max-width: 768px) {
+  .team .chefs {
+    flex-direction: column;
+  }
+}

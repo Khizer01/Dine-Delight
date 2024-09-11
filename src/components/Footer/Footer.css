@@ -1,0 +1,12 @@
+@import '../../AppColors.css';
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
+
+footer p {
+  margin: 0;
+}

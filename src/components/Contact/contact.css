@@ -1,0 +1,37 @@
+@import '../../AppColors.css';
+
+.contact {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 2em;
+}
+
+.c-container {
+  width: 100%;
+  animation: fadeInLeft 1.5s forwards;
+}
+
+.contact-heading {
+  color: var(--white-color);
+  background: var(--primary-color);
+  padding: 10px 20px;
+  border-radius: 8px;
+  width: fit-content;
+  margin: 10px auto;
+  animation: fadeInDown 1.5s forwards;
+}
+
+.contact-detail {
+  margin-top: 1.5em;
+  line-height: 1.6em;
+}
+
+@media screen and (max-width: 768px) {
+  .contact {
+    padding-top: 6rem;
+  }
+}

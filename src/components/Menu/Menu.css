@@ -1,0 +1,160 @@
+@import '../../AppColors.css';
+
+.menu {
+  padding: 5rem 2rem 2rem 2rem;
+  background-color: var(--menuBG-color);
+}
+
+.menu-contain {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.menu h1 {
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+  animation: fadeInLeft 1.5s forwards;
+}
+
+.menu-heading {
+  font-size: 2.5rem;
+  width: fit-content;
+  border-bottom: 2px solid var(--brand-color);
+  margin: 1rem auto;
+  animation: fadeInDown 1.5s forwards;
+}
+
+.appetizers,
+.mainCourse,
+.dessert {
+  margin-top: 2rem;
+}
+
+.menu h3 {
+  color: var(--brand-color);
+  margin-top: 1rem;
+}
+
+.menu p {
+  color: var(--primary-color);
+  font-size: 1rem;
+}
+
+.card {
+  display: inline-block;
+  min-width: 25%;
+  margin: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: var(--white-color);
+  box-shadow: 0 4px 8px var(--boxShadow-color);
+  transition: transform 0.2s;
+  padding: 20px 25px;
+  animation: fadeInTop linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+button {
+  background-color: var(--brand-color);
+  color: var(--white-color);
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  color: var(--primary-color);
+}
+
+button i {
+  margin-left: 0.5rem;
+}
+
+.view-cart {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--brand-color);
+  color: var(--white-color);
+  padding: 0.9rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px 10px 0 0;
+  box-shadow: 0 -2px 10px var(--boxShadow-color);
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.view-cart:hover {
+  background-color: var(--brand-color);
+  color: var(--black-color);
+}
+
+.view-cart span {
+  flex: 1;
+  text-align: center;
+}
+
+.view-cart span:first-child,
+.view-cart span:last-child {
+  flex: 0 0 auto;
+}
+
+/* Scroll to Top Button */
+
+.scrollTop {
+  position: fixed;
+  right: 1em;
+  bottom: 1em;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: var(--brand-color);
+  color: var(--white-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: opacity 0.3s;
+  opacity: 0.8;
+}
+
+.scrollTop:hover {
+  opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .scrollTop {
+    bottom: 4em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .scrollTop {
+    right: unset;
+    left: 1em;
+  }
+
+  .view-cart {
+    max-width: 80%;
+  }
+}

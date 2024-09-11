@@ -1,0 +1,172 @@
+@import '../../AppColors.css';
+
+nav {
+  animation: fadeInDown 1.5s forwards;
+}
+
+
+nav ul {
+    display: flex;
+    gap: 1.5em;
+    list-style: none;
+    margin-right: 2em;
+    align-items: center;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--white-color);
+    font-weight: 500;
+    font-size: 1.2em;
+}
+
+nav ul li a:hover {
+    color: var(--brand-color);
+    transition: 0.3s;
+}
+
+.head {
+    display: flex;
+    align-items: center;
+    font-size: large;
+    gap: 8px;
+    text-decoration: none;
+    color: var(--brand-color);
+    justify-content: space-between;
+    margin: 0 1em;
+}
+
+.logo-text {
+    display: flex;
+    align-items: center;
+    font-size: large;
+    gap: 8px;
+    text-decoration: none;
+    color: var(--brand-color);
+}
+
+.logo {
+    width: 2em;
+    height: 1.5em;
+    margin-right: 0.1em;
+    color: var(--brand-color);
+}
+
+.logo-text p {
+    font-weight: 600;
+    font-size: larger;
+}
+
+.logo-text span {
+    color: var(--white-color);
+    margin-left: 0.2em;
+}
+
+.logo-text span:hover {
+    color: var(--brand-color);
+    transition: 0.3s;
+}
+
+.logo-text:hover {
+    color: var(--white-color);
+    transition: 0.3s;
+}
+
+.link-active {
+    color: var(--brand-color);
+    text-decoration: underline;
+}
+
+.cart {
+    width: 1.3em;
+    height: 1.8em;
+    border-radius: 50%;
+    padding: 0px 10px;
+    margin-top: 3px;
+}
+
+.cart:hover {
+    background-color: var(--brand-color);
+    transition: 0.4s;
+}
+
+.menuBar {
+    display: none;
+    width: 1.5em;
+    height: 1.5em;
+    cursor: pointer;
+}
+
+.cross {
+    display: none;
+    width: 1.6em;
+    height: 1.6em;
+    cursor: pointer;
+}
+
+.active {
+    display: block;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-color);
+    position: absolute;
+    min-width: 100%;
+    z-index: 1000;
+}
+
+.numb {
+    position: absolute;
+    top: 14px;
+    right: 50px;
+    color: var(--brand-color);
+    font-size: 12px;
+}
+
+@media screen and (max-width: 768px) {
+    .menuBar {
+        display: block;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: normal;
+        background-color: var(--primary-color);
+        flex-direction: column;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+        backdrop-filter: blur(10px);
+        border: 1px solid #ffffff40;
+        padding: 1rem 40%;
+        border-radius: 22px;
+    }
+
+    .hide {
+        display: none;
+    }
+
+    .numb {
+        top: 19.42rem;
+        right: 23.46rem;
+    }
+
+    .cart {
+        width: 1.3em;
+        height: 1.6em;
+        padding: 0px 5px;
+        margin-top: 0px;
+        border-radius: 0;
+    }
+}
